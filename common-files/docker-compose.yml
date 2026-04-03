@@ -13,7 +13,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./pg_data:/var/lib/postgresql/data
+      - ./pg_db_data:/var/lib/postgresql/data
       - ./init-postgres-db.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres -d ragdb']
@@ -34,7 +34,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin_pwd
       MONGO_INITDB_DATABASE: ecommerce_db
     volumes:
-      - ./mongo_data:/data/db
+      - ./mongo_db_data:/data/db
       - ./mongo-init:/docker-entrypoint-initdb.d
     healthcheck:
       test:
