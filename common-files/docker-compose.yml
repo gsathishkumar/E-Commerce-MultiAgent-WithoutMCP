@@ -57,7 +57,7 @@ services:
 
   # ── Product RAG API application ────────────────────────────────────────────────────
   product_rag_api:
-    image: ecommerce/product_rag_api:latest
+    image: ecommerce/product_rag_api:without-mcp
     container_name: product_rag_api
     env_file:
       - path: ../product-rag-api/.env
@@ -85,7 +85,7 @@ services:
 
   # ── Refund RAG API application ────────────────────────────────────────────────────
   refund_rag_api:
-    image: ecommerce/refund_rag_api:latest
+    image: ecommerce/refund_rag_api:without-mcp
     container_name: refund_rag_api
     env_file:
       - path: ../refund-rag-api/.env
@@ -113,7 +113,7 @@ services:
 
   # ── Order API application ────────────────────────────────────────────────────
   order_mongo_app:
-    image: ecommerce/order_mongo_app:latest
+    image: ecommerce/order_mongo_app:without-mcp
     container_name: order_mongo_app
     env_file:
       - path: ../order-api/.env
@@ -140,7 +140,7 @@ services:
 
   # ── Refund API application ────────────────────────────────────────────────────
   refund_mongo_app:
-    image: ecommerce/refund_mongo_app:latest
+    image: ecommerce/refund_mongo_app:without-mcp
     container_name: refund_mongo_app
     env_file:
       - path: ../refund-api/.env
@@ -167,7 +167,7 @@ services:
 
   # ── E-Commerce Customer Support System application ────────────────────────────────────────────────────
   ecommerce_support_app:
-    image: ecommerce/ecommerce_support_app:latest
+    image: ecommerce/ecommerce_support_app:without-mcp
     container_name: ecommerce_support_app
     env_file:
       - path: ../ecommerce-support/.env
